@@ -1,0 +1,95 @@
+/* ── Food Delivery App — Global Styles ──────────────────────────────────── */
+
+:root {
+  --primary: #FF5733;
+  --primary-light: #fff8f7;
+  --text: #222;
+  --text-muted: #777;
+  --bg: #f7f7f7;
+  --card-bg: #fff;
+  --border: #e0e0e0;
+  --radius: 10px;
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, 'Courier New', monospace;
+
+  /* Force light mode only — dark-mode theming is not implemented yet */
+  color-scheme: only light;
+
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  text-align: left;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0 0 8px;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.25;
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+code {
+  font-family: var(--mono);
+  font-size: 0.83em;
+  background: #f0f0f0;
+  border-radius: 4px;
+  padding: 2px 6px;
+  color: #c0392b;
+}
+
+button {
+  font-family: var(--sans);
+}
+
+/* Explicit reset for ALL inputs — prevents browsers from auto-applying
+   dark backgrounds or light text when OS dark mode is detected */
+input,
+textarea {
+  font-family: var(--sans);
+  color: #222;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #aaa;
+}
+
+a {
+  color: var(--primary);
+}
